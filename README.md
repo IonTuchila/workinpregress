@@ -13,5 +13,3 @@ An Android App where you can se some location with some datas about it , it was 
 7- LiveData  
 8- Navigation Graph
 9- Dagger-Hilt  
-
-![alt text](https://imgur.com/a/HTfHb4p)
