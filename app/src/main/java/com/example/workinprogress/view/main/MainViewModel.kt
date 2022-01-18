@@ -12,7 +12,7 @@ import javax.inject.Inject
 @HiltViewModel
 class MainViewModel @Inject constructor(private val repository: MainRepository) : ViewModel() {
 
-    var _locations = MutableLiveData<LocationRes>()
+    private var _locations = MutableLiveData<LocationRes>()
     val locations: LiveData<LocationRes>
         get() = _locations
 
@@ -21,12 +21,10 @@ class MainViewModel @Inject constructor(private val repository: MainRepository) 
     }
 
     private fun getLocations() {
-
-
         viewModelScope.launch {
 
             repository.getLocations().let { response ->
-                if (response.isSuccessful){
+                if (response.isSuccessful) {
                     _locations.postValue(response.body())
                 }
             }

@@ -33,6 +33,8 @@ object AppModule {
     @Provides
     fun providesRealmConfig(): RealmConfiguration =
         RealmConfiguration.Builder()
+            .allowQueriesOnUiThread(false)
+            .deleteRealmIfMigrationNeeded()
             .schemaVersion(realmVersion)
             .build()
 

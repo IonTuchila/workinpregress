@@ -50,6 +50,14 @@ android {
         }
     }
 
+    sourceSets {
+        main {
+            java {
+                srcDirs += 'build/generated/source/navigation-args'
+            }
+        }
+    }
+
 }
 
 dependencies {
@@ -91,11 +99,5 @@ dependencies {
     //Navigation
     implementation "androidx.navigation:navigation-fragment-ktx:2.3.5"
     implementation "androidx.navigation:navigation-ui-ktx:2.3.5"
-
-    //Realm
-    api "io.realm:realm-annotations:10.9.0"
-    api "io.realm:realm-android-library:10.9.0"
-    api "io.realm:realm-android-kotlin-extensions:10.9.0"
-    kapt "io.realm:realm-annotations-processor:10.9.0"
 
 }

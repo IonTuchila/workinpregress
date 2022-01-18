@@ -9,7 +9,6 @@ class WorkApplication : MultiDexApplication() {
 
     override fun onCreate() {
         super.onCreate()
-        Realm.init(this)
     }
 
 }
